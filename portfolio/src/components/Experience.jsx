@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const Experience = () => {
     const experiences = [
                 {
-            company: 'Cape Start',
+            company: 'CAPE START',
             role: 'RESEARCH ANALYST INTERN',
             year: 'Aug 2025 - Present',
             summary: 'Developed real-time computer vision models for object detection, person tracking, ReID, and drone-based detection using deep learning.'
@@ -62,5 +62,6 @@ const Experience = () => {
 };
 
 export default Experience;
+
 
 
