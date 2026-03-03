@@ -3,6 +3,12 @@ import { motion } from 'framer-motion';
 
 const Experience = () => {
     const experiences = [
+                {
+            company: 'Cape Start',
+            role: 'RESEARCH ANALYST INTERN',
+            year: 'Aug 2025 - Present',
+            summary: 'Developed real-time computer vision models for object detection, person tracking, ReID, and drone-based detection using deep learning.'
+        },
         {
             company: 'EVOLVE ROBOTICS',
             role: 'DATA SCIENCE INTERN',
@@ -14,13 +20,8 @@ const Experience = () => {
             role: 'MACHINE LEARNING INTERN',
             year: 'AUG 2024',
             summary: 'Developed predictive models and executed exploratory data analysis for system optimization.'
-        },
-        {
-            company: 'Cape Start',
-            role: 'RESEARCH ANALYST INTERN',
-            year: 'Aug 2025 - Present',
-            summary: 'Developed real-time computer vision models for object detection, person tracking, ReID, and drone-based detection using deep learning.'
         }
+
     ];
 
     return (
@@ -61,4 +62,5 @@ const Experience = () => {
 };
 
 export default Experience;
+
 
