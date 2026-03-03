@@ -1,0 +1,14 @@
+.ink-app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+main {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .ink-section {
+    padding: 80px 5%;
+  }
+}

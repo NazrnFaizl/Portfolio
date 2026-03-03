@@ -1,0 +1,145 @@
+.ink-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 2.5rem 10%;
+    transition: var(--transition-smooth);
+}
+
+.ink-nav.scrolled {
+    padding: 1.5rem 10%;
+    background: rgba(252, 250, 247, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(18, 18, 18, 0.05);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.ink-logo {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: var(--ink-primary);
+    z-index: 1001;
+}
+
+.ink-logo span {
+    color: var(--ink-primary);
+    display: inline-block;
+    animation: drip 3s infinite;
+}
+
+@keyframes drip {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+}
+
+.ink-links {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.ink-links a {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+.ink-links a:hover {
+    color: var(--ink-primary);
+    transform: translateY(-2px);
+}
+
+.contact-link {
+    background: var(--ink-primary);
+    color: var(--paper) !important;
+    padding: 0.6rem 1.5rem;
+}
+
+.mobile-toggle {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+    color: var(--ink-primary);
+}
+
+/* Mobile Menu Styles */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--paper);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: var(--transition-smooth);
+    z-index: 1000;
+}
+
+.mobile-menu.active {
+    transform: translateY(0);
+}
+
+.mobile-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+}
+
+.mobile-links a {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: var(--ink-primary);
+    font-style: italic;
+    transition: var(--transition-smooth);
+}
+
+.mobile-links a:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 992px) {
+    .ink-nav {
+        padding: 1.5rem 6%;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: block;
+    }
+
+    .mobile-links .contact-link {
+        background: transparent;
+        color: var(--ink-primary) !important;
+        padding: 0;
+    }
+}
